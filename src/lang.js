@@ -41,13 +41,9 @@ var container = {
    * @return {void}
    */
   _load: function(lang) {
-      var langs = {
-        en : './lang/en',
-        de : './lang/de'
-        }
     if (!this.messages[lang]) {
-        var load = langs[lang];
-      var rawMessages = require(load);
+        // TODO: make dynamic require possible to support other languages
+      var rawMessages = require('./lang/en');
       this._set(lang, rawMessages);
     }
   },
