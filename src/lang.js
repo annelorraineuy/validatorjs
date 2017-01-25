@@ -42,8 +42,8 @@ var container = {
    */
   _load: function(lang) {
       var langs = {
-        en : '.lang/en',
-        de : '.lang/de'
+        en : './lang/en',
+        de : './lang/de'
         }
     if (!this.messages[lang]) {
         var load = langs[lang];
