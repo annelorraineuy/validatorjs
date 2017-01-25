@@ -41,8 +41,13 @@ var container = {
    * @return {void}
    */
   _load: function(lang) {
+      var langs = {
+        en : '.langs/en',
+        de : '.langs/de'
+        }
     if (!this.messages[lang]) {
-      var rawMessages = require('./lang/' + lang);
+        var load = langs[lang];
+      var rawMessages = require(load);
       this._set(lang, rawMessages);
     }
   },
